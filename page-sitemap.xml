@@ -7,15 +7,15 @@
     </url>
     
     <url>
-        <loc>http://taojian.xyz/tags/</loc>
-        <lastmod>2019-06-10T02:25:18.858Z</lastmod>
+        <loc>http://taojian.xyz/about/</loc>
+        <lastmod>2019-06-10T03:13:12.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://taojian.xyz/about/</loc>
-        <lastmod>2019-06-10T02:25:18.825Z</lastmod>
+        <loc>http://taojian.xyz/tags/</loc>
+        <lastmod>2019-06-10T02:25:18.858Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
