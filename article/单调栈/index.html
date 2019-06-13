@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          &lt;单调栈&gt; - 陶健 | Blog
+          [算法] 单调栈 - 陶健 | Blog
         
     </title>
 
@@ -88,8 +88,10 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#算法" title="算法">算法</a>
+                            
                         </div>
-                        <h1>&lt;单调栈&gt;</h1>
+                        <h1>[算法] 单调栈</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 陶健 on
@@ -147,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -211,7 +213,7 @@
                 post-container">
 
                 <h2 id="单调栈定义">单调栈定义</h2>
-<p>​		数据结构中栈的定义想必大家都知道。那什么是单调栈呢？顾名思义，所谓单调栈，就是说栈内的元素具有单调的性质。可以是单调递增，也可以是单调递减（这里指的是非严格单调）。</p>
+<p>数据结构中栈的定义想必大家都知道。那什么是单调栈呢？顾名思义，所谓单调栈，就是说栈内的元素具有单调的性质。可以是单调递增，也可以是单调递减（这里指的是非严格单调）。</p>
 <p>举个🌰，我们要把[6,2,5,4,5,1,6]依次送入到单调栈（递增）中，那么每次操作后栈的状态如下所示：</p>
 <table>
 <thead>
@@ -259,10 +261,10 @@
 </tr>
 </tbody>
 </table>
-<p>​		想必大家已经知道了如何将元素压入栈中的操作了。首先比较要压入栈的元素a与栈顶元素b的大小，如果a &gt;= b，那么直接将a压入栈，如果a &lt; b，那么将栈顶元素推出，重复这个操作，直到栈顶元素b_new &lt;= a 或者栈为空，然后将a压入栈中。</p>
+<p>想必大家已经知道了如何将元素压入栈中的操作了。首先比较要压入栈的元素a与栈顶元素b的大小，如果a &gt;= b，那么直接将a压入栈，如果a &lt; b，那么将栈顶元素推出，重复这个操作，直到栈顶元素b_new &lt;= a 或者栈为空，然后将a压入栈中。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec = &#123;<span class="number">6</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vec.size(); i++) &#123;</span><br><span class="line">  <span class="keyword">while</span> (!st.empty() &amp;&amp; st.top() &gt; vec[i]) st.pop();</span><br><span class="line">  st.push(vec[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="单调栈的应用">单调栈的应用</h2>
-<p>​		举一个leetcode上面的例子：84. Largest Rectangle in Histogram</p>
+<p>举一个leetcode上面的例子：84. Largest Rectangle in Histogram</p>
 <h3 id="题目描述">题目描述</h3>
 <p>Given <em>n</em> non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
 <p><img src="/Users/taojian/Desktop/blog/hexo-huweihuang/source/_posts/%E5%8D%95%E8%B0%83%E6%A0%88/histogram.png" alt=""></p>
@@ -274,8 +276,8 @@
 <h3 id="使用单调栈来解决">使用单调栈来解决</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; heights)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; st; <span class="comment">// store indexs</span></span><br><span class="line">        heights.push_back(<span class="number">0</span>);</span><br><span class="line">        st.push_back(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; heights.size(); i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!st.size() == <span class="number">0</span> &amp;&amp; heights[st.back()] &gt; heights[i]) &#123;</span><br><span class="line">                <span class="keyword">int</span> right_index = i;</span><br><span class="line">                <span class="keyword">int</span> h = heights[st.back()];</span><br><span class="line">                st.pop_back();</span><br><span class="line">                <span class="keyword">int</span> left_index = st.size() == <span class="number">0</span> ? <span class="number">0</span> : st.back() + <span class="number">1</span>;</span><br><span class="line">                ans = max(ans, (right_index - left_index) * h);</span><br><span class="line">            &#125;</span><br><span class="line">            st.push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="说明">说明</h3>
-<p>​		为什么使用单调栈就能保证程序的正确性呢？这道题naive的做法是：对于每个长条Bar，先在其左边找到第一个高度小于Bar的长条BarL，同理，再找到右边第一个大于Bar高度的长条BarR。那么以Bar的高度为宽的矩形，其长度最大为多少呢。max_width = BarR.index - BarL.index - 1。那么该矩形的面积为S = Bar.height * max_width。遍历每个长条，取S的最大值，即为所求。</p>
-<p>​		下面说一说为什么使用单调栈就能保证程序的正确性。假设对于每个Bari，假设其已经压入到栈中了，栈的状态如下所示：</p>
+<p>为什么使用单调栈就能保证程序的正确性呢？这道题naive的做法是：对于每个长条Bar，先在其左边找到第一个高度小于Bar的长条BarL，同理，再找到右边第一个大于Bar高度的长条BarR。那么以Bar的高度为宽的矩形，其长度最大为多少呢。max_width = BarR.index - BarL.index - 1。那么该矩形的面积为S = Bar.height * max_width。遍历每个长条，取S的最大值，即为所求。</p>
+<p>下面说一说为什么使用单调栈就能保证程序的正确性。假设对于每个Bari，假设其已经压入到栈中了，栈的状态如下所示：</p>
 <table>
 <thead>
 <tr>
@@ -395,6 +397,8 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#算法" title="算法">算法</a>
+                        
                     </div>
                 </section>
                 
