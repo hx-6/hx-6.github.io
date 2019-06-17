@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://taojian.xyz</loc>
+        <loc>http://huxindalao.xyz</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://taojian.xyz/C-Primer-Plus/8-7-%E5%A4%8D%E4%B9%A0%E9%A2%98/</loc>
-        <lastmod>2019-06-17T05:58:54.017Z</lastmod>
+        <loc>http://huxindalao.xyz/%E6%84%9F%E6%83%B3/my-first-post/</loc>
+        <lastmod>2019-06-17T14:48:00.447Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://taojian.xyz/article/%E6%89%93%E7%A2%8E%E4%BA%86%E7%89%99%E5%BE%80%E8%82%9A%E5%AD%90%E9%87%8C%E5%92%BD/</loc>
-        <lastmod>2019-06-17T05:54:53.379Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://taojian.xyz/article/%E7%A8%80%E7%96%8F%E8%A1%A8/</loc>
-        <lastmod>2019-06-13T12:32:20.643Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://taojian.xyz/%E6%84%9F%E6%83%B3/my-first-post/</loc>
-        <lastmod>2019-06-13T06:46:42.011Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://taojian.xyz/article/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
-        <lastmod>2019-06-13T06:32:24.995Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://taojian.xyz/article/hexo-theme-huweihuang/</loc>
+        <loc>http://huxindalao.xyz/article/hexo-theme-huweihuang/</loc>
         <lastmod>2019-06-10T02:25:18.822Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
