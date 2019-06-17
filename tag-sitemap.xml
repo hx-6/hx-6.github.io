@@ -24,7 +24,14 @@
 
     <url>
         <loc>http://taojian.xyz/tags/NBA/</loc>
-        <lastmod>2019-06-14T15:46:37.252Z</lastmod>
+        <lastmod>2019-06-17T05:54:53.379Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://taojian.xyz/tags/C/</loc>
+        <lastmod>2019-06-17T05:58:54.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
